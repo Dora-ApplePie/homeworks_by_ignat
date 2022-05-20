@@ -1,0 +1,32 @@
+.item {
+    margin: 10px;
+    width: 100px;
+}
+
+.affair {
+    display: flex;
+}
+
+.low {
+    color: darkorange;
+}
+
+.high {
+    color: red;
+}
+
+.middle {
+    color: green;
+}
+
+.btn {
+    background-color: #168eae;
+    border: 1px black solid;
+    margin: 10px;
+    padding: 5px;
+    width: 80px;
+}
+
+.btn:hover {
+    color: #f00;
+}
