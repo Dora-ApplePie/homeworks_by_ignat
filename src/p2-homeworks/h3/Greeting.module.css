@@ -1,7 +1,38 @@
-.someClass {
-
+.error {
+    border: 1px red solid;
 }
 
-.error {
-    border: 1px solid red;
+.errorMsg {
+    color: red;
+    height: 20px;
+}
+
+.greeting {
+    display: flex;
+    align-items: flex-start;
+}
+
+.errorInput {
+    border: 2px solid red;
+    outline: none;
+}
+
+.btn {
+    background-color: #bfe44e;
+    border: 2px #89a438 solid;
+    width: 50px;
+    color: black;
+}
+
+.btn:disabled {
+    background-color: #89a438;
+    border: 2px #72882f solid;
+}
+
+.inputClass:focus {
+    outline: none;
+}
+
+.count {
+    margin: 0 10px;
 }
