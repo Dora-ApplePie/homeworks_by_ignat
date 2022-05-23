@@ -1,38 +1,51 @@
-.error {
-    border: 1px red solid;
-}
+/*.error {*/
+/*    border: 1px red solid;*/
+/*}*/
 
-.errorMsg {
-    color: red;
-    height: 20px;
-}
+/*.errorMsg {*/
+/*    color: red;*/
+/*    height: 20px;*/
+/*}*/
 
-.greeting {
+.greetingContainer {
     display: flex;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
 }
 
-.errorInput {
-    border: 2px solid red;
-    outline: none;
-}
-
-.btn {
-    background-color: #bfe44e;
-    border: 2px #89a438 solid;
-    width: 50px;
-    color: black;
-}
-
-.btn:disabled {
-    background-color: #89a438;
-    border: 2px #72882f solid;
-}
-
-.inputClass:focus {
-    outline: none;
+.greetingInputBtn{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
 }
 
 .count {
     margin: 0 10px;
+    color: white;
+    font-size: 20px;
 }
+
+/*.errorInput {*/
+/*    border: 2px solid red;*/
+/*    outline: none;*/
+/*}*/
+
+/*.btn {*/
+/*    color: black;*/
+/*    border: 2px #89a438 solid;*/
+/*    width: 50px;*/
+/*}*/
+
+/*.btn:disabled {*/
+/*    background-color: #89a438;*/
+/*    border: 2px #72882f solid;*/
+/*}*/
+
+/*.btn:hover {*/
+/*    background-color: #d3ef80;*/
+/*}*/
+
+/*.inputClass:focus {*/
+/*    outline: none;*/
+/*}*/
+

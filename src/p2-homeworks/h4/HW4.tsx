@@ -14,6 +14,7 @@ function HW4() {
         } else {
             alert(text) // если нет ошибки показать текст
         }
+        setText('')
     }
 
     const [checked, setChecked] = useState<boolean>(false)
@@ -30,7 +31,7 @@ function HW4() {
                     onChangeText={setText}
                     onEnter={showAlert}
                     error={error}
-                    // spanClassName={s.testSpanError}
+                    //spanClassName={s.testSpanError}
                 />
 
                 <SuperInputText
@@ -40,7 +41,7 @@ function HW4() {
                 {/*----------------------------------------------------*/}
 
                 <SuperButton>
-                    default
+                    default {/*// название кнопки - попадёт в children*/}
                 </SuperButton>
 
                 <SuperButton
@@ -60,7 +61,7 @@ function HW4() {
                     checked={checked}
                     onChangeChecked={setChecked}
                 >
-                    some text {/*// этот текст попадёт в children*/}
+                    Increase $BTC {/*// этот текст попадёт в children*/}
                 </SuperCheckbox>
 
                 {/*// onChange тоже должен работать*/}

@@ -39,21 +39,25 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
     }
 
     const finalSpanClassName = `${s.error} ${spanClassName ? spanClassName : ''}`
-    const finalInputClassName = `${s.errorInput} ${className}` // need to fix with (?:) and s.superInput
+    const finalInputClassName = `${s.errorInput} ${!error ? s.superInput : s.errorInput} ${className} `
 
     return (
-        <>
-            <input
-                type={'text'}
-                onChange={onChangeCallback}
-                onKeyPress={onKeyPressCallback}
-                className={finalInputClassName}
+        <div className={s.inputContainer}>
+            <div className={s.inputSpanContainer}>
+                <input
+                    type={'text'}
+                    placeholder={"Enter text..."}
+                    onChange={onChangeCallback}
+                    onKeyPress={onKeyPressCallback}
+                    className={finalInputClassName}
 
-                {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
-            />
-            {error && <span className={finalSpanClassName}>{error}</span>}
-        </>
+                    {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
+                />
+                <span className={s.focusBorder}><i></i></span>
+            </div>
+            <span className={finalSpanClassName}>{error}</span>
+        </div>
     )
 }
 
-export default SuperInputText
+export default SuperInputText;
