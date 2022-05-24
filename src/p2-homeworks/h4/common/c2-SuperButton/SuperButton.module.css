@@ -10,6 +10,23 @@
     font-family: 'Montserrat', sans-serif;
     color: rgba(82, 183, 31, 0.9);
     transition: .2s ease-in-out;
+    cursor: pointer;
+}
+
+.red {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 10px;
+    margin: 5px 5px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid black;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    transition: .2s ease-in-out;
+    background: red;
+    cursor: pointer;
 }
 
 .default:before,
@@ -42,18 +59,4 @@
     transition: .5s ease-in-out;
 }
 
-.red {
-    text-decoration: none;
-    display: inline-block;
-    padding: 10px 10px;
-    margin: 5px 5px;
-    position: relative;
-    overflow: hidden;
-    border: 2px solid black;
-    border-radius: 8px;
-    font-family: 'Montserrat', sans-serif;
-    color: black;
-    transition: .2s ease-in-out;
-    background: red;
-}
 
