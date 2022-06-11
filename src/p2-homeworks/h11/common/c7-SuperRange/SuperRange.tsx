@@ -11,6 +11,7 @@ type SuperRangePropsType = DefaultInputPropsType & { // и + ещё пропсы
     value: number
     max: number
     min: number
+    step: number
     bgColor?: string
     styleClassNameRange?: React.CSSProperties | string // React.CSSProperties для объекта (st)
     styleProgressOverlay?: React.CSSProperties         // по аналогии с st
@@ -18,9 +19,11 @@ type SuperRangePropsType = DefaultInputPropsType & { // и + ещё пропсы
 
 const SuperRange: React.FC<SuperRangePropsType> = (
     {
+
         type, // достаём и игнорируем чтоб нельзя было задать другой тип инпута
         onChange, onChangeRange,
         className,
+        step,
         value, max, min,
         bgColor, styleClassNameRange, styleProgressOverlay,
         ...restProps// все остальные пропсы попадут в объект restProps
@@ -57,7 +60,7 @@ const SuperRange: React.FC<SuperRangePropsType> = (
                 }}/>
             </div>
             <input
-                step={1}
+                step={step}
                 max={max}
                 value={value}
                 type={'range'}

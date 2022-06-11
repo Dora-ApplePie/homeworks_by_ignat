@@ -7,6 +7,7 @@ type SuperDoubleRangePropsType = {
     value: [number, number]
     min: number
     max: number
+    step: number
     setValue1: (n: number) => void
     setValue2: (n: number) => void
 }
@@ -14,7 +15,7 @@ type SuperDoubleRangePropsType = {
 const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
     {
         onChangeRange, value,
-        min, max,
+        min, max, step,
         ...props
     }
 ) => {
@@ -36,7 +37,7 @@ const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
 
     return (
         <div className={s.double}>
-            <SuperRange value={value[0]} min={min} max={max}
+            <SuperRange step={step} value={value[0]} min={min} max={max}
                         bgColor={'#eee'}
                         onChangeRange={setValueFunc1}
                         styleClassNameRange={s.rangePosition}
@@ -44,7 +45,7 @@ const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
             />
 
             {/*<SuperRange value={value && value[1]} min={min} max={max} - если опционально*/}
-            <SuperRange value={value[1]} min={min} max={max}
+            <SuperRange step={step} value={value[1]} min={min} max={max}
                         onChangeRange={setValueFunc2}
             />
         </div>

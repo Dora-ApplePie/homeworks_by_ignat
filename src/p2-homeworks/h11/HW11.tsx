@@ -24,6 +24,7 @@ function HW11() {
                 <br/>
                 <div>
                     <SuperRange
+                        step={1}
                         value={value1}
                         min={0}
                         max={100}
@@ -38,6 +39,7 @@ function HW11() {
                 <div>
                     <SuperDoubleRange
                         value={[value1, value2]}
+                        step={1}
                         min={0}
                         max={100}
                         onChangeRange={onChangeDoubleInputRangeHandle}
