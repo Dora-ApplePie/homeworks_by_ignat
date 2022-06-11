@@ -20,7 +20,7 @@ function HW11() {
     return (
         <div>
             <div style={{width: '60%'}}>
-                <h3>homeworks 11</h3>
+                <p>homeworks 11</p>
                 <br/>
                 <div>
                     <SuperRange
