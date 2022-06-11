@@ -19,11 +19,11 @@ const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
     }
 ) => {
 
-    const func1 = (n: number) => {
+    const setValueFunc1 = (n: number) => {
         if (value[1] <= n) return
         props.setValue1(n)
     }
-    const func2 = (n: number) => {
+    const setValueFunc2 = (n: number) => {
         if (value[0] >= n) return
         props.setValue2(n)
     }
@@ -38,14 +38,14 @@ const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
         <div className={s.double}>
             <SuperRange value={value[0]} min={min} max={max}
                         bgColor={'#eee'}
-                        onChangeRange={func1}
+                        onChangeRange={setValueFunc1}
                         styleClassNameRange={s.rangePosition}
                         styleProgressOverlay={{position: 'relative'}}
             />
 
             {/*<SuperRange value={value && value[1]} min={min} max={max} - если опционально*/}
             <SuperRange value={value[1]} min={min} max={max}
-                        onChangeRange={func2}
+                        onChangeRange={setValueFunc2}
             />
         </div>
     )
